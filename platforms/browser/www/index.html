@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First Food</title>
+
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsenui.css">
+  <link rel="stylesheet" href="lib/OnsenUI/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+<!-- CODELAB: Add link rel manifest -->
+<link rel="manifest" href="/manifest.json">
+<script >
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+</script>
+</head>
+
+<body id='body'>
+  <ons-navigator swipeable id="myNavigator" page="splitter.html"></ons-navigator>
+
+  <!-- <template id="pagelogin.html">
+  </template>
+  <template id="rec.html">
+  </template> -->
+
+
+
+  <template id="splitter.html">
+    <ons-page>
+      <ons-splitter id="mySplitter">
+        <ons-splitter-side id="sidemenu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+        </ons-splitter-side>
+        <ons-splitter-content page="rec.html" id="content">
+        </ons-splitter-content>
+      </ons-splitter>
+    </ons-page>
+  </template>
+
+
+  <!-- <template id="home.html"></template>
+  <template id="food_details.html">
+  </template>
+  <template id="payment.html"> 
+  </template> -->
+  <script src="lib/OnsenUI/js/onsenui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+  <script src="lib/Jquery/jquery.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+  <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<ons-page id="address">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-chevron-left" id='backbtn' onclick="goBack()"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center bar" id='bar'>Address</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-search"></ons-icon>
+            </ons-toolbar-button>
+            <ons-if platform="android">
+                <ons-toolbar-button>
+                    <ons-icon icon="ion-android-more-vertical"></ons-icon>
+                </ons-toolbar-button>
+            </ons-if>
+        </div>
+    </ons-toolbar>
+    <div id="map"></div>
+<div id="address"></div>
+<pre id='coordinates' class='coordinates'></pre>
+<ons-fab position="bottom right" id="setAddress">
+    <ons-icon
+      icon="fa-map-pin" >
+    </ons-icon>
+  </ons-fab>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+body {margin:0; padding: 0;}
+#map {position: absolute; top: 0; bottom: 0; width: 100%;}
+.coordinates {
+background: rgba(0,0,0,0.5);
+color: #fff;
+position: absolute;
+bottom: 40px;
+left: 10px;
+padding:5px 10px;
+margin: 0;
+font-size: 11px;
+line-height: 18px;
+border-radius: 3px;
+display: none;
+}
+</style>
+
+</ons-page>

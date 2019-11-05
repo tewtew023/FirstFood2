@@ -1,0 +1,46 @@
+
+.form {
+    text-align: center;
+    width: 80%;
+    margin: 60px auto 0;
+  }
+  
+  input[type=email], input[type=password],input[type=tel],input[type=Fname],input[type=con-password]{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    outline: none;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 16px;
+  color: aliceblue;
+  }
+  
+  .login-button {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sign-up {
+    display: block;
+    margin: 8px auto 0 auto;
+    font-size: 14px;
+  }#body .page__background {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/food-first-b91f2.appspot.com/o/green.png?alt=media&token=55e45508-71ba-426f-ac14-2191c789700c);
+  }
+ .toolbar{ 
+     background-color:black; 
+     padding-right: 15px;
+ }
+ .bar{
+        color: peru;}
+.shops{
+  width: 150px;
+  height: 113px;
+}
+.carousel ons-carousel-item img {
+  width: 100%;
+  max-height: 190px;
+}
+.list{
+  background-color: transparent;
+}
