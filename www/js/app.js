@@ -1,4 +1,6 @@
+localStorage.clear();
 // Your web app's Firebase configuration
+
 var firebaseConfig = {
   apiKey: "AIzaSyAKcz3NgRSyTBYnAfpGnkaEaEfkLwgSYlY",
   authDomain: "food-first-b91f2.firebaseapp.com",
@@ -36,7 +38,10 @@ function openFoodDetails(shopid, id) {
   localStorage.setItem("foodID", id);
 }
 function delivered(){
-  ons.notification.toast(' Your Food will be arrive soon. Thank you!', { timeout: 1000, animation: 'fall' })
+  
+  ons.notification.toast(' Your Food will be arrive soon. Thank you!', { timeout: 1000, animation: 'fall' });
+  var long = localStorage.getItem("lng");
+  console.log(long);
 }
 function openHome(id,url) {
   document.querySelector('#myNavigator').pushPage('home.html');
@@ -65,6 +70,7 @@ function openPayment() {
 function openPayment() {
   document.querySelector('#myNavigator').pushPage('payment.html');
 } function openCart() {
+
   document.querySelector('#myNavigator').pushPage('cart.html');
 }
  function openAddress() {
@@ -454,17 +460,21 @@ document.addEventListener('init', function (event) {
 
   //start cart page
 
- // start detail
+ 
  if (page.id === 'cart') {
+ 
   var amout = localStorage.getItem("amout"); 
   console.log('Cart page');
  var card=  localStorage.getItem("cartItem");
  console.log('card'+card);
   $('#cartCard').append(card);
-}
+
 
 var confbtn =  `<ons-button class="conf" modifier="large" style="background-color: green " onclick="delivered()" id="conftext">Amout: `+amout+`THB</ons-button>`
 $('#cart').append(confbtn);
+
+}
+
 
   //end cart
   //start address
@@ -497,7 +507,7 @@ $('#cart').append(confbtn);
               }
                
               marker.on('dragend', onDragEnd);
-       
+              
           }
         
         function onError(error) {
@@ -507,7 +517,10 @@ $('#cart').append(confbtn);
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
         
         $("#setAddress").click(function (){
-          ons.notification.alert("Delivery"+selectedlat+" "+selectedlng)
+          ons.notification.alert("Your address is "+selectedlat+" "+selectedlng)
+          localStorage.setItem("lat", selectedlat);
+          localStorage.setItem("lng", selectedlng);
+
         }
 
         );
